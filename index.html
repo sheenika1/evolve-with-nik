@@ -8,7 +8,7 @@
 <meta name="description" content="Faith-rooted healing & soft-luxe living for the woman becoming whole again. Start free with The Empty Cup Self-Audit.">
 
 <!-- Favicon (gold E monogram on black) -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0d0d'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='44' fill='%23c9a96e' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23241220'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='44' fill='%23c8a24e' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
 
 <!-- Link preview (Facebook, Instagram, iMessage, etc.) -->
 <meta property="og:type" content="website">
@@ -30,18 +30,23 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --black:#0d0d0d;
-  --off:#faf9f7;
-  --gold:#c9a96e;
+  /* Exit Plan brand palette: deep plum-black base, plum + wine accents, gold + terracotta */
+  --black:#1a0f17;          /* plum-black base (was near-black) */
+  --black2:#241220;         /* plum panel */
+  --wine:#3a222a;           /* wine wash */
+  --plum:#5a2440;           /* deep plum (Exit Plan headings) */
+  --off:#f6ede1;            /* ivory/oat text */
+  --gold:#c8a24e;           /* Exit Plan gold */
   --gold2:#e8d5b0;
-  --border:rgba(201,169,110,0.22);
-  --muted:rgba(250,249,247,0.48);
+  --coral:#a85a3c;          /* terracotta accent — accent only */
+  --border:rgba(200,162,78,0.22);
+  --muted:rgba(246,237,225,0.50);
 }
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;background:var(--black);color:var(--off);overflow-x:hidden}
+body{font-family:"DM Sans",sans-serif;background:linear-gradient(160deg,#1a0f17 0%,#241220 55%,#1a0f17 100%);background-attachment:fixed;color:var(--off);overflow-x:hidden}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 3.5rem;background:rgba(13,13,13,0.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 3.5rem;background:rgba(26,15,23,0.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
 .nav-brand{font-family:"Playfair Display",serif;font-size:1.1rem;font-weight:600;letter-spacing:.05em;color:var(--off);text-decoration:none}
 .nav-links{display:flex;gap:1.6rem;list-style:none}
 .nav-links a{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
@@ -69,7 +74,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .hero-bg-img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.18) contrast(1.05)}
 .hero-ghost{position:absolute;right:0;top:0;bottom:0;width:52%;z-index:1;overflow:hidden}
 .hero-ghost img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;opacity:.13;mix-blend-mode:luminosity;filter:contrast(1.1)}
-.hero-ghost-fade{position:absolute;inset:0;background:linear-gradient(to right,var(--black) 0%,rgba(13,13,13,.6) 50%,transparent 100%)}
+.hero-ghost-fade{position:absolute;inset:0;background:linear-gradient(to right,var(--black) 0%,rgba(36,18,32,.6) 50%,transparent 100%)}
 .hero-content{position:relative;z-index:2;padding:4rem 5rem;max-width:680px}
 .hero h1{font-family:"Playfair Display",serif;font-size:clamp(3rem,6vw,5.2rem);font-weight:400;line-height:1.06;color:var(--off);margin-bottom:1.35rem}
 .hero h1 em{font-style:italic;color:var(--gold)}
@@ -86,27 +91,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .o-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.8)}
 .o-img .fade-r{position:absolute;inset:0;background:linear-gradient(to right,transparent 55%,var(--black) 100%)}
 .o-img .fade-l{position:absolute;inset:0;background:linear-gradient(to left,transparent 55%,var(--black) 100%)}
-.o-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 4.5rem;background:var(--black)}
+.o-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 4.5rem;background:var(--black2)}
 .o-badge{display:inline-block;font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.27rem .78rem;margin-bottom:1.1rem;width:fit-content}
 .o-list{list-style:none;margin:1rem 0 1.6rem}
 .o-list li{font-size:.81rem;color:var(--muted);padding:.26rem 0;display:flex;gap:.5rem;align-items:baseline;font-weight:300}
 .o-list li::before{content:"\2022";color:var(--gold);font-size:.9rem;flex-shrink:0;line-height:1}
 .o-foot{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;padding-top:1.15rem;border-top:1px solid var(--border)}
 .o-price{font-family:"Playfair Display",serif;font-size:1.7rem;font-weight:400;color:var(--gold);line-height:1}
-.o-price small{font-family:"DM Sans",sans-serif;font-size:.66rem;font-weight:300;color:rgba(250,249,247,.28);display:block;margin-top:.16rem;letter-spacing:.04em}
+.o-price small{font-family:"DM Sans",sans-serif;font-size:.66rem;font-weight:300;color:rgba(246,237,225,.28);display:block;margin-top:.16rem;letter-spacing:.04em}
 
 /* ── HOMEGIRL MEMO ── */
 .memo{border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;min-height:520px}
 .memo-img{position:relative;overflow:hidden}
 .memo-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.75)}
 .memo-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--black) 100%)}
-.memo-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 4.5rem;background:var(--black)}
+.memo-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 4.5rem;background:var(--black2)}
 
 /* envelope decoration */
 .memo-envelope{
   display:inline-flex;align-items:center;gap:.6rem;
   font-size:.65rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--gold);border:1px solid rgba(201,169,110,.35);
+  color:var(--gold);border:1px solid rgba(200,162,78,.35);
   padding:.32rem .9rem;margin-bottom:1.15rem;width:fit-content;
 }
 .memo-envelope::before{content:"✉";font-size:.85rem;letter-spacing:0}
@@ -124,11 +129,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .btn-spill::after{content:"";display:none}
 
 /* ── FOOTER ── */
-footer{padding:2.25rem 5rem;background:#0a0a0a;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+footer{padding:2.25rem 5rem;background:#150b13;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .ft-brand{font-family:"Playfair Display",serif;font-size:1rem;font-weight:600;color:var(--off);letter-spacing:.05em}
-.ft-copy{font-size:.68rem;color:rgba(250,249,247,.26);letter-spacing:.06em}
+.ft-copy{font-size:.68rem;color:rgba(246,237,225,.26);letter-spacing:.06em}
 .ft-links{display:flex;gap:1.3rem;list-style:none}
-.ft-links a{font-size:.66rem;color:rgba(250,249,247,.3);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.ft-links a{font-size:.66rem;color:rgba(246,237,225,.3);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
 .ft-links a:hover{color:var(--gold)}
 
 /* ── ANIMATIONS ── */
@@ -155,18 +160,18 @@ footer{padding:2.25rem 5rem;background:#0a0a0a;border-top:1px solid var(--border
 }
 
 /* ── FREEBIE / EMAIL CAPTURE ── */
-.freebie{border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;min-height:460px;background:var(--black)}
+.freebie{border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;min-height:460px;background:var(--black2)}
 .freebie-img{position:relative;overflow:hidden}
 .freebie-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(.6) grayscale(.3)}
 .freebie-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,transparent 55%,var(--black) 100%)}
 .freebie-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 4.5rem}
-.free-badge{display:inline-block;font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,.45);padding:.27rem .78rem;margin-bottom:1.1rem;width:fit-content}
+.free-badge{display:inline-block;font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,162,78,.45);padding:.27rem .78rem;margin-bottom:1.1rem;width:fit-content}
 .freebie-form{display:flex;flex-direction:column;gap:.75rem;margin-top:1.4rem}
-.freebie-form input[type="email"]{background:rgba(255,255,255,.05);border:1px solid rgba(201,169,110,.35);color:var(--off);font-family:"DM Sans",sans-serif;font-size:.88rem;padding:.85rem 1.1rem;outline:none;transition:border-color .2s;width:100%}
-.freebie-form input[type="email"]::placeholder{color:rgba(250,249,247,.3)}
+.freebie-form input[type="email"]{background:rgba(255,255,255,.05);border:1px solid rgba(200,162,78,.35);color:var(--off);font-family:"DM Sans",sans-serif;font-size:.88rem;padding:.85rem 1.1rem;outline:none;transition:border-color .2s;width:100%}
+.freebie-form input[type="email"]::placeholder{color:rgba(246,237,225,.3)}
 .freebie-form input[type="email"]:focus{border-color:var(--gold)}
 .freebie-form .btn-gold{width:100%;text-align:center;padding:1rem;font-size:.76rem}
-.freebie-note{font-size:.72rem;color:rgba(250,249,247,.28);margin-top:.5rem;letter-spacing:.03em}
+.freebie-note{font-size:.72rem;color:rgba(246,237,225,.28);margin-top:.5rem;letter-spacing:.03em}
 
 @media(max-width:860px){
   .freebie{grid-template-columns:1fr}
@@ -206,7 +211,7 @@ nav{top:32px!important}
 /* ── INLINE FREEBIE CALLOUT ── */
 .inline-freebie{
   border-top:1px solid var(--border);
-  background:linear-gradient(135deg,#111 0%,#161208 50%,#111 100%);
+  background:linear-gradient(135deg,#241220 0%,#3a222a 50%,#241220 100%);
   padding:3.5rem 5rem;
   display:flex;align-items:center;justify-content:space-between;
   gap:2rem;flex-wrap:wrap;
@@ -216,7 +221,7 @@ nav{top:32px!important}
   content:"✦";
   position:absolute;right:3rem;top:50%;transform:translateY(-50%);
   font-family:"Playfair Display",serif;font-size:9rem;
-  color:rgba(201,169,110,.06);pointer-events:none;line-height:1;
+  color:rgba(200,162,78,.06);pointer-events:none;line-height:1;
 }
 .if-left{flex:1;min-width:260px}
 .if-badge{
@@ -233,7 +238,7 @@ nav{top:32px!important}
 .if-title em{font-style:italic;color:var(--gold)}
 .if-sub{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.7}
 .if-right{display:flex;flex-direction:column;align-items:flex-start;gap:.6rem;flex-shrink:0}
-.if-note{font-size:.7rem;color:rgba(250,249,247,.28);letter-spacing:.04em}
+.if-note{font-size:.7rem;color:rgba(246,237,225,.28);letter-spacing:.04em}
 @media(max-width:860px){
   .inline-freebie{padding:2.5rem 1.5rem;flex-direction:column;align-items:flex-start}
   .if-right{width:100%}
@@ -244,7 +249,7 @@ nav{top:32px!important}
 <style>
 /* ── SOCIALS (footer) ── */
 .ft-mid{display:flex;flex-direction:column;align-items:center;gap:.55rem}
-.ft-handle{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,249,247,.4);font-family:"DM Sans",sans-serif}
+.ft-handle{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,237,225,.4);font-family:"DM Sans",sans-serif}
 .ft-social{display:flex;gap:.7rem}
 .ft-social .ico{width:34px;height:34px;border:1px solid var(--border);display:grid;place-items:center;color:var(--muted);transition:color .2s,border-color .2s,background .2s}
 .ft-social .ico:hover{color:var(--black);background:var(--gold);border-color:var(--gold)}
@@ -253,8 +258,8 @@ footer{flex-wrap:wrap;gap:1.4rem}
 @media(max-width:860px){.ft-mid{order:3}}
 
 /* ── EMAIL OPT-IN (uses inline-freebie language, centered) ── */
-.optin{border-top:1px solid var(--border);background:linear-gradient(135deg,#111 0%,#161208 50%,#111 100%);padding:4rem 5rem;position:relative;overflow:hidden;text-align:center}
-.optin::before{content:"\2726";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:"Playfair Display",serif;font-size:13rem;color:rgba(201,169,110,.05);pointer-events:none;line-height:1}
+.optin{border-top:1px solid var(--border);background:linear-gradient(135deg,#241220 0%,#3a222a 50%,#241220 100%);padding:4rem 5rem;position:relative;overflow:hidden;text-align:center}
+.optin::before{content:"\2726";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:"Playfair Display",serif;font-size:13rem;color:rgba(200,162,78,.05);pointer-events:none;line-height:1}
 .optin-inner{position:relative;z-index:1;max-width:620px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
 .optin .eyebrow{justify-content:center}
 .optin .eyebrow::before{display:none}
@@ -262,8 +267,8 @@ footer{flex-wrap:wrap;gap:1.4rem}
 .optin-q li{font-size:.85rem;color:var(--muted);font-weight:300;display:flex;gap:.55rem;align-items:baseline}
 .optin-q li::before{content:"\2022";color:var(--gold);flex-shrink:0}
 .optin-form{display:flex;gap:.6rem;width:100%;max-width:440px;flex-wrap:wrap;justify-content:center}
-.optin-form input[type=email]{flex:1;min-width:220px;background:rgba(255,255,255,.05);border:1px solid rgba(201,169,110,.35);color:var(--off);font-family:"DM Sans",sans-serif;font-size:.88rem;padding:.9rem 1.1rem;outline:none;transition:border-color .2s}
-.optin-form input[type=email]::placeholder{color:rgba(250,249,247,.3)}
+.optin-form input[type=email]{flex:1;min-width:220px;background:rgba(255,255,255,.05);border:1px solid rgba(200,162,78,.35);color:var(--off);font-family:"DM Sans",sans-serif;font-size:.88rem;padding:.9rem 1.1rem;outline:none;transition:border-color .2s}
+.optin-form input[type=email]::placeholder{color:rgba(246,237,225,.3)}
 .optin-form input[type=email]:focus{border-color:var(--gold)}
 .optin-form .btn-gold{border:0;cursor:pointer}
 @media(max-width:860px){.optin{padding:3rem 1.5rem}.optin-form .btn-gold{width:100%}}
